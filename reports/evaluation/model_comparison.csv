@@ -1,0 +1,9 @@
+metric,custom_cnn,resnet18,delta (m2 - m1),winner
+Accuracy,0.7531,0.9499,0.1968,resnet18
+Macro Precision,0.7481,0.9484,0.2003,resnet18
+Macro Recall,0.7485,0.9472,0.1987,resnet18
+Macro F1-Score (Primary),0.7406,0.9477,0.2071,resnet18
+Weighted F1-Score,0.7503,0.9497,0.1994,resnet18
+Total Parameters,94762.0,11181642.0,11086880.0,custom_cnn (lighter)
+Inference Time Full Test Set (s),6.7126,10.3457,3.6331,custom_cnn
+Avg Inference Time per Image (ms),1.657,2.555,0.898,custom_cnn

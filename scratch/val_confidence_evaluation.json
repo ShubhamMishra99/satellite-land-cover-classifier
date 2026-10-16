@@ -1,0 +1,144 @@
+{
+  "resnet18": {
+    "model": "resnet18",
+    "total_samples": 4050,
+    "mean_conf": 0.9486843536812583,
+    "median_conf": 0.9976497888565063,
+    "p1": 0.4628327572345734,
+    "p5": 0.6546405255794525,
+    "p10": 0.8107356429100037,
+    "thresholds": {
+      "0.3": {
+        "accepted_count": 4046,
+        "acceptance_rate": 99.90123456790123,
+        "false_rejection_rate": 0.09876543209877298
+      },
+      "0.4": {
+        "accepted_count": 4026,
+        "acceptance_rate": 99.4074074074074,
+        "false_rejection_rate": 0.5925925925925952
+      },
+      "0.5": {
+        "accepted_count": 3990,
+        "acceptance_rate": 98.51851851851852,
+        "false_rejection_rate": 1.481481481481481
+      },
+      "0.55": {
+        "accepted_count": 3949,
+        "acceptance_rate": 97.50617283950618,
+        "false_rejection_rate": 2.4938271604938222
+      },
+      "0.6": {
+        "accepted_count": 3905,
+        "acceptance_rate": 96.41975308641976,
+        "false_rejection_rate": 3.5802469135802397
+      },
+      "0.65": {
+        "accepted_count": 3853,
+        "acceptance_rate": 95.1358024691358,
+        "false_rejection_rate": 4.864197530864203
+      },
+      "0.7": {
+        "accepted_count": 3793,
+        "acceptance_rate": 93.65432098765432,
+        "false_rejection_rate": 6.345679012345684
+      },
+      "0.75": {
+        "accepted_count": 3734,
+        "acceptance_rate": 92.19753086419753,
+        "false_rejection_rate": 7.802469135802468
+      },
+      "0.8": {
+        "accepted_count": 3659,
+        "acceptance_rate": 90.34567901234568,
+        "false_rejection_rate": 9.654320987654316
+      },
+      "0.85": {
+        "accepted_count": 3573,
+        "acceptance_rate": 88.22222222222223,
+        "false_rejection_rate": 11.777777777777771
+      },
+      "0.9": {
+        "accepted_count": 3451,
+        "acceptance_rate": 85.20987654320987,
+        "false_rejection_rate": 14.790123456790127
+      },
+      "0.95": {
+        "accepted_count": 3256,
+        "acceptance_rate": 80.39506172839506,
+        "false_rejection_rate": 19.604938271604937
+      }
+    }
+  },
+  "custom_cnn": {
+    "model": "custom_cnn",
+    "total_samples": 4050,
+    "mean_conf": 0.670144032560013,
+    "median_conf": 0.6728716790676117,
+    "p1": 0.2806193155050278,
+    "p5": 0.33940618187189103,
+    "p10": 0.3856361120939255,
+    "thresholds": {
+      "0.3": {
+        "accepted_count": 3970,
+        "acceptance_rate": 98.0246913580247,
+        "false_rejection_rate": 1.9753086419753032
+      },
+      "0.4": {
+        "accepted_count": 3578,
+        "acceptance_rate": 88.34567901234568,
+        "false_rejection_rate": 11.654320987654316
+      },
+      "0.5": {
+        "accepted_count": 2985,
+        "acceptance_rate": 73.70370370370371,
+        "false_rejection_rate": 26.29629629629629
+      },
+      "0.55": {
+        "accepted_count": 2678,
+        "acceptance_rate": 66.12345679012346,
+        "false_rejection_rate": 33.876543209876544
+      },
+      "0.6": {
+        "accepted_count": 2404,
+        "acceptance_rate": 59.358024691358025,
+        "false_rejection_rate": 40.641975308641975
+      },
+      "0.65": {
+        "accepted_count": 2133,
+        "acceptance_rate": 52.666666666666664,
+        "false_rejection_rate": 47.333333333333336
+      },
+      "0.7": {
+        "accepted_count": 1872,
+        "acceptance_rate": 46.22222222222222,
+        "false_rejection_rate": 53.77777777777778
+      },
+      "0.75": {
+        "accepted_count": 1595,
+        "acceptance_rate": 39.382716049382715,
+        "false_rejection_rate": 60.617283950617285
+      },
+      "0.8": {
+        "accepted_count": 1335,
+        "acceptance_rate": 32.96296296296296,
+        "false_rejection_rate": 67.03703703703704
+      },
+      "0.85": {
+        "accepted_count": 1076,
+        "acceptance_rate": 26.567901234567902,
+        "false_rejection_rate": 73.4320987654321
+      },
+      "0.9": {
+        "accepted_count": 803,
+        "acceptance_rate": 19.82716049382716,
+        "false_rejection_rate": 80.17283950617283
+      },
+      "0.95": {
+        "accepted_count": 448,
+        "acceptance_rate": 11.06172839506173,
+        "false_rejection_rate": 88.93827160493827
+      }
+    }
+  }
+}

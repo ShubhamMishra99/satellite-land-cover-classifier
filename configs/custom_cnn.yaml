@@ -1,0 +1,30 @@
+# Custom CNN Baseline Hyperparameters & Configuration
+model:
+  name: "custom_cnn"
+  in_channels: 3
+  num_classes: 10
+  conv_channels: [32, 64, 128]
+  dropout_rate: 0.3
+
+training:
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "AdamW"
+  scheduler:
+    type: "ReduceLROnPlateau"
+    mode: "max"
+    factor: 0.5
+    patience: 3
+    min_lr: 0.00001
+  early_stopping:
+    patience: 6
+    min_delta: 0.001
+    monitor: "val_macro_f1"
+    mode: "max"
+
+artifacts:
+  checkpoint_dir: "models/checkpoints/custom_cnn"
+  best_model_path: "models/custom_cnn_best.pt"
+  metrics_path: "models/custom_cnn_history.json"

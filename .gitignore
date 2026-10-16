@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.env
+.venv
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Datasets & Large Artifacts (never commit raw/processed data or heavy checkpoints)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*.pt
+models/*.pth
+models/*.onnx
+!models/.gitkeep
+
+# Logs & Outputs
+logs/
+*.log
+runs/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend build outputs & dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/build/

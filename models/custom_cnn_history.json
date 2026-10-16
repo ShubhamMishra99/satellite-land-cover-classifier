@@ -1,0 +1,50 @@
+{
+  "epoch": [
+    1,
+    2
+  ],
+  "train_loss": [
+    1.0741,
+    0.7848
+  ],
+  "train_accuracy": [
+    0.6263,
+    0.7233
+  ],
+  "train_macro_precision": [
+    0.6107,
+    0.7101
+  ],
+  "train_macro_recall": [
+    0.6169,
+    0.7143
+  ],
+  "train_macro_f1": [
+    0.612,
+    0.7111
+  ],
+  "val_loss": [
+    0.7631,
+    0.7996
+  ],
+  "val_accuracy": [
+    0.7486,
+    0.6906
+  ],
+  "val_macro_precision": [
+    0.7455,
+    0.7299
+  ],
+  "val_macro_recall": [
+    0.7442,
+    0.695
+  ],
+  "val_macro_f1": [
+    0.7374,
+    0.6676
+  ],
+  "learning_rate": [
+    0.001,
+    0.001
+  ]
+}

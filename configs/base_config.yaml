@@ -1,0 +1,66 @@
+# Base Configuration for Satellite Land-Use Classifier
+project:
+  name: "satellite-land-use-classifier"
+  version: "0.1.0"
+  description: "Deep learning classification of EuroSAT RGB satellite imagery into 10 land-use classes"
+  author: "B.Tech Final Year / Academic Portfolio"
+
+seed: 42
+
+dataset:
+  name: "EuroSAT_RGB"
+  num_classes: 10
+  image_size: [64, 64]
+  channels: 3
+  raw_dir: "data/raw/EuroSAT_RGB"
+  processed_dir: "data/processed"
+  download_url: "https://madm.dfki.de/files/sentinel/EuroSAT.zip"
+  splits:
+    train_ratio: 0.70
+    val_ratio: 0.15
+    test_ratio: 0.15
+    stratified: true
+    seed: 42
+
+classes:
+  - AnnualCrop
+  - Forest
+  - HerbaceousVegetation
+  - Highway
+  - Industrial
+  - Pasture
+  - PermanentCrop
+  - Residential
+  - River
+  - SeaLake
+
+normalization:
+  # EuroSAT RGB empirical dataset statistics
+  mean: [0.3444, 0.3803, 0.4078]
+  std: [0.2026, 0.1368, 0.1156]
+
+augmentation:
+  train:
+    random_horizontal_flip_prob: 0.5
+    random_vertical_flip_prob: 0.5
+    random_rotation_degrees: [0, 90, 180, 270]
+    color_jitter:
+      brightness: 0.1
+      contrast: 0.1
+      saturation: 0.1
+  val_test:
+    # Deterministic: Resize/ToTensor/Normalize only
+    deterministic: true
+
+dataloader:
+  batch_size: 64
+  num_workers: 0  # Safe default for Windows compatibility
+  pin_memory: false
+  drop_last_train: false
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  model_path: "models/best_model.pth"
+  max_upload_size_mb: 10
+  allowed_extensions: [".jpg", ".jpeg", ".png", ".tif", ".tiff"]

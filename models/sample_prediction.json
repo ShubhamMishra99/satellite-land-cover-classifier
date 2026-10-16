@@ -1,0 +1,76 @@
+{
+  "image": "data\\raw\\EuroSAT_RGB\\Residential\\Residential_1.jpg",
+  "device": "cpu",
+  "original_size": [
+    64,
+    64
+  ],
+  "model_input_size": [
+    64,
+    64
+  ],
+  "models": {
+    "custom_cnn": {
+      "predicted_class": "Residential",
+      "confidence": 0.9548,
+      "top3": [
+        {
+          "class": "Residential",
+          "probability": 0.9548
+        },
+        {
+          "class": "Industrial",
+          "probability": 0.0193
+        },
+        {
+          "class": "Highway",
+          "probability": 0.0139
+        }
+      ],
+      "all_probabilities": {
+        "AnnualCrop": 0.0,
+        "Forest": 0.0,
+        "HerbaceousVegetation": 0.0067,
+        "Highway": 0.0139,
+        "Industrial": 0.0193,
+        "Pasture": 0.0003,
+        "PermanentCrop": 0.0012,
+        "Residential": 0.9548,
+        "River": 0.0038,
+        "SeaLake": 0.0
+      }
+    },
+    "resnet18": {
+      "predicted_class": "Residential",
+      "confidence": 1.0,
+      "top3": [
+        {
+          "class": "Residential",
+          "probability": 1.0
+        },
+        {
+          "class": "Industrial",
+          "probability": 0.0
+        },
+        {
+          "class": "PermanentCrop",
+          "probability": 0.0
+        }
+      ],
+      "all_probabilities": {
+        "AnnualCrop": 0.0,
+        "Forest": 0.0,
+        "HerbaceousVegetation": 0.0,
+        "Highway": 0.0,
+        "Industrial": 0.0,
+        "Pasture": 0.0,
+        "PermanentCrop": 0.0,
+        "Residential": 1.0,
+        "River": 0.0,
+        "SeaLake": 0.0
+      }
+    }
+  },
+  "ground_truth": "Residential",
+  "agreement": true
+}

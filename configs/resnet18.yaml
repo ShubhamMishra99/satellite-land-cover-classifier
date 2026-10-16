@@ -1,0 +1,63 @@
+# ResNet-18 Transfer Learning & Staged Fine-Tuning Configuration
+model:
+  name: "resnet18_transfer"
+  weights: "IMAGENET1K_V1"
+  pretrained: true
+  num_classes: 10
+  dropout_rate: 0.0
+
+training:
+  batch_size: 64
+  phase1_epochs: 10
+  phase2_epochs: 15
+  phase1_learning_rate: 0.001
+  phase2_learning_rate: 0.00005
+  weight_decay: 0.0001
+  optimizer: "AdamW"
+
+staged_training:
+  # Phase 1: Freeze backbone, train new classification head
+  phase1:
+    name: "head_training"
+    epochs: 10
+    batch_size: 64
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    optimizer: "AdamW"
+    freeze_backbone: true
+
+  # Phase 2: Unfreeze layer3 & layer4, fine-tune at lower learning rate
+  phase2:
+    name: "fine_tuning"
+    epochs: 15
+    batch_size: 64
+    learning_rate: 0.00005
+    backbone_learning_rate: 0.00005
+    head_learning_rate: 0.0002
+    weight_decay: 0.0001
+    optimizer: "AdamW"
+    unfreeze_layers: ["layer3", "layer4", "fc"]
+
+scheduler:
+  type: "CosineAnnealingLR"
+  T_max: 15
+  eta_min: 0.000001
+
+early_stopping:
+  patience: 5
+  min_delta: 0.001
+  monitor: "val_macro_f1"
+  mode: "max"
+
+checkpoint:
+  path: "models/resnet18_best.pt"
+  phase1_path: "models/resnet18_phase1_best.pt"
+
+history:
+  path: "models/resnet18_history.json"
+
+artifacts:
+  checkpoint_dir: "models/checkpoints/resnet18"
+  phase1_model_path: "models/resnet18_phase1_best.pt"
+  best_model_path: "models/resnet18_best.pt"
+  metrics_path: "models/resnet18_history.json"
